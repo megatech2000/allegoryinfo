@@ -13,7 +13,9 @@ const Tools = () => {
             <div key={i}>
               <div>
                 <Image
-                  className="w-24   p-5 rounded-xl border border-[#2a2929]"
+                  data-aos="fade-up"
+                  data-aos-duration="800"
+                  className="w-full    p-5 rounded-xl border border-[#2a2929]"
                   src={item}
                   alt="tools image"
                   width={1000}

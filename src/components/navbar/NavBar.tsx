@@ -7,11 +7,11 @@ const NavBar = () => {
       path: "#",
     },
     {
-      title: "ABOUT",
+      title: "PORTFOLIO",
       path: "#",
     },
     {
-      title: "PORTFOLIO",
+      title: "ABOUT",
       path: "#",
     },
   ];
@@ -29,7 +29,7 @@ const NavBar = () => {
         ))}
       </div>
       <div>
-        <button className="px-10 py-2 bg-[#fff] rounded-full font-semibold">
+        <button className="px-10 py-2 bg-[#fff] rounded-full font-semibold btn-hover">
           CONTACT
         </button>
       </div>

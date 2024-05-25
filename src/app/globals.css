@@ -17,7 +17,7 @@ p {
   transition: all 500ms;
 }
 .btn-hover:hover {
-  transform: scale(1.03);
+  transform: scale(1.07);
 }
 .bg-img {
   background-image: url("/images/work-img-1.png");
@@ -46,4 +46,39 @@ p {
 /* Handle on hover */
 .bg-scroll::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+/* styles.css or a relevant CSS file/module */
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient-text {
+  background: linear-gradient(270deg, #ff3cac, #784ba0, #c1d508);
+  background-size: 600% 600%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient 5s ease infinite;
+}
+
+/* Custom CSS if not using Tailwind */
+.transition-opacity {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.opacity-100 {
+  opacity: 1;
+}
+
+.opacity-0 {
+  opacity: 0;
 }

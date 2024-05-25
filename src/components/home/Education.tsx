@@ -13,21 +13,41 @@ const Education = () => {
               </div>
               <div>
                 <div className="py-10 flex items-center justify-between">
-                  <h3 className="text-4xl text-[#BEBEBE] ">
+                  <h3
+                    className="text-4xl text-[#BEBEBE] "
+                    data-aos="fade-up"
+                    data-aos-duration="800"
+                  >
                     <span className="text-[#FFC809] font-semibold">+2</span>
                     <br /> Computer Science
                   </h3>
-                  <p className="text-xl">2016-18</p>
+                  <p
+                    className="text-xl"
+                    data-aos="fade-up"
+                    data-aos-duration="800"
+                  >
+                    2016-18
+                  </p>
                 </div>
                 <hr className="border-[#2a2929]" />
                 <div className="pt-10 flex items-center justify-between">
-                  <h3 className="text-4xl text-[#BEBEBE]">
+                  <h3
+                    className="text-4xl text-[#BEBEBE]"
+                    data-aos="fade-up"
+                    data-aos-duration="800"
+                  >
                     <span className="text-[#FFC809] font-semibold">
                       Diploma
                     </span>
                     <br /> Art and media
                   </h3>
-                  <p className="text-xl">2018-22</p>
+                  <p
+                    className="text-xl"
+                    data-aos="fade-up"
+                    data-aos-duration="800"
+                  >
+                    2018-22
+                  </p>
                 </div>
               </div>
             </div>

@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { projectData } from "./data";
+import { motion } from "framer-motion";
 
 const Portfolio = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -11,23 +12,38 @@ const Portfolio = () => {
       <div className="bg-gradient-to-b from-[#0f0f0f] via-[#0f0f0f] to-transparent h-[5vh] w-full absolute top-[37%] z-[1000]"></div>
       <div className="bg-gradient-to-b from-transparent via-[#0f0f0f] to-[#0f0f0f] h-[5vh] w-full absolute bottom-[-28px] z-[1000]"></div>
       <div className="flex flex-col h-full">
-        <div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           <p className="text-xl">Portfolio</p>
-        </div>
+        </motion.div>
         <div className="py-16">
-          <h2 className="text-6xl font-semibold text-[#BEBEBE]">
+          <motion.h2
+            className="text-6xl font-semibold text-[#BEBEBE]"
+            initial={{ opacity: 0, scale: 0 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
             Check out My Featured
             <br /> Projects
-          </h2>
+          </motion.h2>
         </div>
         <div className="overflow-y-auto bg-scroll ">
           <div className="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 gap-10 pr-5 ">
             {projectData.map((item, index) => (
-              <div
+              <motion.div
                 className="w-full h-full relative"
                 key={index}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
               >
                 <div
                   className="bg-cover bg-center rounded-2xl  h-72"
@@ -41,7 +57,7 @@ const Portfolio = () => {
                     </button>
                   </div>
                 )}
-              </div>
+              </motion.div>
             ))}
             {/* card end */}
           </div>
