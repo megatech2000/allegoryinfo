@@ -44,6 +44,36 @@ export const projectData = [
     img: "/images/work-img-4.png",
     project: "project 8",
   },
+  {
+    projectName: "web 3",
+    img: "/images/work-img-3.png",
+    project: "project 7",
+  },
+  {
+    projectName: "web 4",
+    img: "/images/work-img-4.png",
+    project: "project 8",
+  },
+  {
+    projectName: "web 4",
+    img: "/images/work-img-4.png",
+    project: "project 8",
+  },
+  {
+    projectName: "web 3",
+    img: "/images/work-img-3.png",
+    project: "project 7",
+  },
+  {
+    projectName: "web 4",
+    img: "/images/work-img-4.png",
+    project: "project 8",
+  },
+  {
+    projectName: "web 4",
+    img: "/images/work-img-4.png",
+    project: "project 8",
+  },
 ];
 
 export const toolsData = [

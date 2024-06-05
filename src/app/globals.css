@@ -7,6 +7,30 @@ body {
   background-color: #0f0f0f;
 }
 
+@layer base {
+  h1 {
+    @apply xl:text-6xl  text-white text-5xl font-medium  md:leading-tight xl:leading-tight lg:leading-tight;
+  }
+  h2 {
+    @apply text-white   xl:text-5xl lg:text-4xl  text-3xl font-semibold leading-tight;
+  }
+  h3 {
+    @apply text-white   xl:text-4xl lg:text-3xl md:text-3xl text-xl font-semibold leading-tight mb-4;
+  }
+  h4 {
+    @apply text-white   xl:text-3xl lg:text-3xl md:text-3xl text-xl font-semibold leading-tight mb-4;
+  }
+  h5 {
+    @apply text-white   md:text-2xl     text-xl font-semibold leading-tight mb-3;
+  }
+  h6 {
+    @apply text-white   md:text-xl     text-lg font-semibold leading-tight mb-2;
+  }
+  p {
+    @apply xl:text-lg   md:text-base text-sm  text-[#8c8a8a];
+  }
+}
+
 p {
   color: #ababab;
 }
@@ -81,4 +105,25 @@ p {
 
 .opacity-0 {
   opacity: 0;
+}
+
+@media screen and (max-width: 628px) {
+  .bg-scroll::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-in {
+  animation: slideIn 0.5s ease-out;
 }

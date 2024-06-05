@@ -9,8 +9,8 @@ import { motion } from "framer-motion";
 const SideBar = () => {
   return (
     <section>
-      <div className="px-10 pt-5">
-        <div className="bg-[#505050] rounded-2xl p-5">
+      <div className="md:px-10  md:pt-5 p-5 md:p-0">
+        <div className="bg-[#505050]  rounded-2xl p-5">
           <div className="flex items-center justify-center">
             <Image
               className="w-64"
@@ -58,50 +58,50 @@ const SideBar = () => {
               CSS3, JavaScript, and popular frameworks like React and Next.js
             </motion.p>
           </div>
-          <div className="flex items-center justify-center gap-6 py-6">
+          <div className="flex items-center justify-start gap-5  py-6">
             <motion.div
               initial={{ y: 50, scale: 0 }}
               animate={{ y: 0, scale: 1 }}
               transition={{ duration: 0.4 }}
-              className="px-4 py-2 border border-[#656464] bg-[#191919]  rounded-full cursor-pointer hover:bg-[#505050] bg-hover"
+              className="w-full py-3 md:py-1 border border-[#656464] bg-[#191919]  rounded-full cursor-pointer flex items-center justify-center hover:bg-[#505050] bg-hover"
             >
-              <FaInstagram className="text-white" />
+              <FaInstagram className="text-white text-xl s" />
             </motion.div>
             <motion.div
               initial={{ y: 50, scale: 0 }}
               animate={{ y: 0, scale: 1 }}
               transition={{ duration: 0.5 }}
-              className="px-4 py-2 border border-[#656464] bg-[#191919]  rounded-full cursor-pointer hover:bg-[#505050] bg-hover"
+              className="w-full py-3 md:py-1 border border-[#656464] bg-[#191919] flex items-center justify-center  rounded-full cursor-pointer hover:bg-[#505050] bg-hover"
             >
-              <FaFacebookF className="text-white" />
+              <FaFacebookF className="text-white text-xl" />
             </motion.div>
             <motion.div
               initial={{ y: 50, scale: 0 }}
               animate={{ y: 0, scale: 1 }}
               transition={{ duration: 0.5 }}
-              className="px-4 py-2 border border-[#656464] bg-[#191919]  rounded-full cursor-pointer hover:bg-[#505050] bg-hover"
+              className="w-full py-3 md:py-1 border border-[#656464] bg-[#191919] flex items-center justify-center  rounded-full cursor-pointer hover:bg-[#505050] bg-hover"
             >
-              <FaWhatsapp className="text-white" />
+              <FaWhatsapp className="text-white text-xl" />
             </motion.div>
             <motion.div
               initial={{ y: 50, scale: 0 }}
               animate={{ y: 0, scale: 1 }}
               transition={{ duration: 0.6 }}
-              className="px-4 py-2 border border-[#656464] bg-[#191919]  rounded-full cursor-pointer hover:bg-[#505050] bg-hover"
+              className="w-full py-3 md:py-1 border border-[#656464] bg-[#191919]  rounded-full flex items-center justify-center cursor-pointer hover:bg-[#505050] bg-hover"
             >
-              <FaLinkedinIn className="text-white" />
+              <FaLinkedinIn className="text-white text-xl" />
             </motion.div>
             <motion.div
               initial={{ y: 50, scale: 0 }}
               animate={{ y: 0, scale: 1 }}
               transition={{ duration: 0.6 }}
-              className="px-4 py-2 border border-[#656464] bg-[#191919]  rounded-full cursor-pointer hover:bg-gradient-to-r from-[#505050] via-[#6D6D6D] to-[#6D6D6D] bg-hover"
+              className="w-full py-3 md:py-1 border border-[#656464] bg-[#191919]  rounded-full cursor-pointer flex items-center justify-center hover:bg-gradient-to-r from-[#505050] via-[#6D6D6D] to-[#6D6D6D] bg-hover"
             >
-              <FaGithub className="text-white" />
+              <FaGithub className="text-white text-xl" />
             </motion.div>
           </div>
-          <div className="flex gap-8">
-            <div className="bg-[#fff] px-10 rounded-full py-2 flex items-center justify-center cursor-pointer hover:bg-[#cdcbcb]">
+          <div className="md:flex gap-8">
+            <div className="bg-[#fff] px-10 rounded-full py-2 flex items-center  justify-center cursor-pointer hover:bg-[#cdcbcb]">
               <Image
                 className="w-6"
                 src="/images/mail.svg"
@@ -110,8 +110,8 @@ const SideBar = () => {
                 height={600}
               />
             </div>
-            <div className="cursor-pointer">
-              <button className="px-9 font-bold py-2 bg-[#FFC809] rounded-full btn-hover">
+            <div className="cursor-pointer mt-2 md:mt-0">
+              <button className="w-full md:px-9 font-bold py-2 bg-[#FFC809] rounded-full btn-hover">
                 TALK CASUALY
               </button>
             </div>

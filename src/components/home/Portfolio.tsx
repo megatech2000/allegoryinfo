@@ -1,67 +1,99 @@
 "use client";
-import { useState } from "react";
+
 import Image from "next/image";
 import { projectData } from "./data";
-import { motion } from "framer-motion";
+import { IoIosArrowDroprightCircle } from "react-icons/io";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+import { Autoplay, Navigation } from "swiper/modules";
+import { useRef, useEffect, useState } from "react";
+// import { motion } from "framer-motion";
 
 const Portfolio = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section className="h-screen overflow-hidden pt-5 relative">
-      <div className="bg-gradient-to-b from-[#0f0f0f] via-[#0f0f0f] to-transparent h-[5vh] w-full absolute top-[37%] z-[1000]"></div>
-      <div className="bg-gradient-to-b from-transparent via-[#0f0f0f] to-[#0f0f0f] h-[5vh] w-full absolute bottom-[-28px] z-[1000]"></div>
+    <section className="pt-5 relative">
       <div className="flex flex-col h-full">
-        <motion.div
-          initial={{ opacity: 0, scale: 0 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <p className="text-xl">Portfolio</p>
-        </motion.div>
+        <div>
+          <p>Portfolio</p>
+        </div>
         <div className="py-16">
-          <motion.h2
-            className="text-6xl font-semibold text-[#BEBEBE]"
-            initial={{ opacity: 0, scale: 0 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
+          <h2 className=" text-[#BEBEBE]">
             Check out My Featured
             <br /> Projects
-          </motion.h2>
+          </h2>
         </div>
-        <div className="overflow-y-auto bg-scroll ">
-          <div className="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 gap-10 pr-5 ">
-            {projectData.map((item, index) => (
-              <motion.div
-                className="w-full h-full relative"
-                key={index}
-                onMouseEnter={() => setHoveredIndex(index)}
-                onMouseLeave={() => setHoveredIndex(null)}
-                initial={{ opacity: 0, scale: 0 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
-              >
-                <div
-                  className="bg-cover bg-center rounded-2xl  h-72"
-                  style={{ backgroundImage: `url(${item.img})` }}
-                />
+      </div>
+      <div>
+        <Swiper
+          slidesPerView={1}
+          loop={true}
+          navigation={{
+            nextEl: ".button-next-silde",
+            prevEl: ".button-prev-silde",
+          }}
+          autoplay={{
+            delay: 1200,
+            disableOnInteraction: false,
+          }}
+          breakpoints={{
+            480: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
 
-                {hoveredIndex === index && (
-                  <div className="absolute bottom-0 left-0 right-0  p-3">
-                    <button className="px-10 py-2 bg-[#fff] text-[#000] rounded-full font-semibold hover:bg-[#FFC809]  btn-hover">
-                      View Project
-                    </button>
-                  </div>
-                )}
-              </motion.div>
-            ))}
-            {/* card end */}
+            640: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+          }}
+          modules={[Autoplay, Navigation]}
+          className="mySwiper"
+        >
+          {projectData.map((item, i) => (
+            <SwiperSlide>
+              <div key={i}>
+                <div>
+                  <Image
+                    className="w-full"
+                    src={item.img}
+                    alt=""
+                    width={1000}
+                    height={1000}
+                  />
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+
+          <div className="flex items-center justify-between">
+            <div className="flex gap-4 mt-5">
+              <div className="button-prev-silde">
+                <div className="text-white  text-4xl cursor-pointer rotate-180">
+                  <IoIosArrowDroprightCircle />
+                </div>
+              </div>
+              <div className="button-next-silde">
+                <div className="text-white  text-4xl cursor-pointer">
+                  <IoIosArrowDroprightCircle />
+                </div>
+              </div>
+            </div>
+            <div className="pr-10 mt-5">
+              <a href="/portfolio">
+                <button className="px-6 py-2 bg-[#fff] rounded-full from-neutral-50 hover:bg-[#FFC809] hover:text-white btn-hover uppercase text-sm">
+                  View All
+                </button>
+              </a>
+            </div>
           </div>
-        </div>
+        </Swiper>
       </div>
     </section>
   );

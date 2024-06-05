@@ -25,7 +25,7 @@ const About = () => {
   };
 
   return (
-    <section className="pt-5">
+    <section className="">
       <div>
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
@@ -33,7 +33,7 @@ const About = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <p className="text-xl">About me</p>
+          <p>About me</p>
         </motion.div>
         <motion.div
           className="py-16"
@@ -42,25 +42,25 @@ const About = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-6xl font-semibold text-[#BEBEBE]">
+          <h2 className=" text-[#BEBEBE]">
             Turning complex Designs
             <br /> into simple Codes
           </h2>
         </motion.div>
-        <div className="flex">
-          <div className="w-full  pr-36">
+        <div className="md:flex">
+          <div className="w-full  md:pr-36">
             <motion.div
-              className="bg-gradient-to-b from-[#191919] via-[#191919] to-[#1f1f1f] py-10 flex flex-col items-center justify-center rounded-2xl border border-[#434242]"
+              className="bg-gradient-to-b from-[#191919] via-[#191919]  to-[#1f1f1f] py-10 flex flex-col items-center justify-center rounded-2xl border border-[#434242]"
               initial={{ opacity: 0, scale: 0 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <p className="text-6xl text-[#FFC809]">40+</p>
-              <p>web works</p>
+              <h1 className=" text-[#FFC809] mb-5 md:mb-0">40+</h1>
+              <h5>web works</h5>
             </motion.div>
           </div>
-          <div className="w-full  pr-36 ">
+          <div className="w-full  md:pr-36 mt-5 md:mt-0">
             <motion.div
               className="bg-gradient-to-b from-[#191919] via-[#191919] to-[#1f1f1f] py-10 flex flex-col items-center justify-center rounded-2xl border border-[#434242]"
               initial={{ opacity: 0, scale: 0 }}
@@ -68,8 +68,8 @@ const About = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <p className="text-6xl text-[#BEBEBE]">1+</p>
-              <p>Experience</p>
+              <h1 className=" text-[#BEBEBE] mb-5 md:mb-0">1+</h1>
+              <h5>Experience</h5>
             </motion.div>
           </div>
         </div>
@@ -86,7 +86,7 @@ const About = () => {
             help bring your vision to life.
           </p>
         </div>
-        <div className="pt-10 mb-28">
+        <div className="pt-10 ">
           {isMounted && (
             <button
               onClick={handleDownload}
